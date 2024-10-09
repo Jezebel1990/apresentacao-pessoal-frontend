@@ -45,8 +45,10 @@ return (
         <motion.div variants={fadeIn('up', 0.6)} initial="hidden"
         whileInView={'show'} viewport={{once: false, amount: 0.7 }}
         className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
+         <a href='#contact'>
             <button className='btn btn-lg'>Conectar</button>
-            <a href='#' className='text-gradient btn-link'>Meus Projetos 
+            </a>
+            <a href='#projects' className='text-gradient btn-link'>Meus Projetos 
             </a>
         </motion.div>
 
