@@ -8,6 +8,10 @@
 - [Framer Motion](https://www.framer.com/motion/): Biblioteca para criar animações fluidas e interativas na interface.
 
 ## Funcionalidades
+- **Navegação Intuitiva:** O projeto conta com uma barra de navegação fixa na parte inferior da tela, que permite ao usuário transitar facilmente entre as diferentes seções da página. Cada ícone na navegação representa uma seção específica (Home, Sobre, Habilidades, Projetos e Contato), utilizando o pacote react-scroll para garantir uma experiência de navegação fluida e eficiente.
+- **Animações Personalizadas:** As transições entre os elementos utilizam animações configuradas no arquivo variants.jsx. O efeito fadeIn garante que os componentes apareçam de forma suave conforme o usuário rola a página. Esse efeito inclui animações direcionais com controles de tempo personalizados para uma experiência mais dinâmica.
+- **Design Responsivo:** O layout do projeto é totalmente responsivo, garantindo uma boa experiência em diferentes dispositivos, desde desktops até smartphones. O uso de Tailwind CSS ajuda a construir e ajustar o design rapidamente.
+
 
 ## Como Rodar o Projeto
 
@@ -27,10 +31,29 @@
 4. Abra o navegador em http://localhost:5173 para ver a aplicação.
 
 
+## Estrutura do Projeto
 
-> ## Desafio de Apresentação Pessoal - Processo Seletivo Frontend Fusion - [cargo voluntário]
+| Estrutura         | Descrição                                                                 |
+| ----------------- | ------------------------------------------------------------------------- |
+| `/src`            | Contém o código-fonte do projeto, incluindo os componentes React.         |
+| `/src/components` | Inclui os componentes principais: `Header`, `Nav`, `Banner`, `About`, `Skills`, `Projects` e `Contact`. |
+| `/src/variants.jsx` | Define animações personalizadas, como a função `fadeIn`, usada para transições suaves nos componentes. |
+| `/src/assets` | Contém arquivos de imagens. |
+| `/src/App.jsx`    | Componente principal que reúne os componentes da aplicação e define a estrutura do layout. |
+| `/public`         | Contém o arquivo de logo em formato SVG utilizado no projeto.             |
 
-> ## Sobre o Desafio
+
+## Licença
+Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
+
+Feito com ♥ por [Jezebel Guedes](https://www.linkedin.com/in/jezebel-guedes/) 👋 Entre em contato!
+
+
+<hr />
+
+ ## Desafio de Apresentação Pessoal - Processo Seletivo Frontend Fusion - [cargo voluntário]
+
+ ## Sobre o Desafio
 
 > Este é um desafio de apresentação pessoal do processo seletivo do projeto Frontend Fusion para a vaga de Desenvolvedor React Júnior. O desafio foi criado para avaliar  habilidades em desenvolvimento com React e a capacidade de criar uma página de apresentação pessoal.
 
