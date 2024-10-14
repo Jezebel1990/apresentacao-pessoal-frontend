@@ -1,17 +1,42 @@
-# Desafio de Apresentação Pessoal - Processo Seletivo Frontend Fusion - [cargo voluntário]
+# Jezebel Guedes
+> Esta é uma página de apresentação pessoal desenvolvida em React Js e Tailwind CSS  para apresentar projetos e informações sobre a desenvolvedora Front-End Jezebel Guedes.
 
-## Sobre o Desafio
+## Tecnologias Utilizadas
 
-Bem-vindo ao desafio de apresentação pessoal do processo seletivo do projeto Frontend Fusion para a vaga de Desenvolvedor React Júnior. Este desafio foi criado para avaliar suas habilidades em desenvolvimento com React e sua capacidade de criar uma página de apresentação pessoal.
+- [React.js](https://react.dev/): Biblioteca JavaScript para a construção de interfaces de usuário.
+- [Tailwind CSS](https://tailwindcss.com/): Framework de CSS para o design responsivo e estilização da interface.
+- [Framer Motion](https://www.framer.com/motion/): Biblioteca para criar animações fluidas e interativas na interface.
 
-> OBS : Você receberá um e-mail com a data de início dos desafios, mas eles já estão disponíveis para acesso imediato. 
-Se ainda não preencheu o formulário, por favor, acesse o link para completá-lo.
-[Forms de inscrição](https://forms.gle/EJKDNKdmVZM3zQTr7)
-é importante está inscrito no formulário , pois o seu email precisa ser validado
+## Funcionalidades
+
+## Como Rodar o Projeto
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/Jezebel1990/apresentacao-pessoal-frontend.git
+   cd apresentacao-pessoal-frontend
+   ```
+2. Instale as dependências:
+  ```bash
+    npm install
+   ```
+3. Execute o projeto em desenvolvimento:
+  ```bash
+    npm run dev
+   ```
+4. Abra o navegador em http://localhost:5173 para ver a aplicação.
+
+
+
+> ## Desafio de Apresentação Pessoal - Processo Seletivo Frontend Fusion - [cargo voluntário]
+
+> ## Sobre o Desafio
+
+> Este é um desafio de apresentação pessoal do processo seletivo do projeto Frontend Fusion para a vaga de Desenvolvedor React Júnior. O desafio foi criado para avaliar  habilidades em desenvolvimento com React e a capacidade de criar uma página de apresentação pessoal.
 
 ## Objetivo
 
-Crie uma página de apresentação pessoal utilizando React com Vite. Esta página deve incluir:
+Criar uma página de apresentação pessoal utilizando React com Vite. Esta página deve incluir:
 
 - Seu nome
 - Uma breve descrição sobre você
@@ -21,7 +46,7 @@ Crie uma página de apresentação pessoal utilizando React com Vite. Esta pági
 
 ## Diferenciais
 
-Para se destacar, recomendamos implementar os seguintes diferenciais:
+Para se destacar:
 
 - **Tailwind CSS**: Utilize Tailwind CSS para estilizar sua página.
 - **Gerenciadores de Estado**: Utilize gerenciadores de estado como Redux ou Context API para gerenciar o estado da aplicação.
@@ -33,7 +58,7 @@ Para se destacar, recomendamos implementar os seguintes diferenciais:
 
 ## Entrega
 
-Faça o deploy da sua aplicação em plataformas como GitHub Pages, Heroku, Vercel, Netlify, ou qualquer outra de sua preferência. Após concluir o desafio, envie o link do deploy e do repositório do código-fonte por e-mail para **projetofrontendfusion@gmail.com**. O e-mail deve incluir:
+Deploy da aplicação em plataformas como GitHub Pages, Heroku, Vercel, Netlify, ou qualquer outra. Após concluir o desafio, deve ser enviado o link do deploy e do repositório do código-fonte por e-mail para **projetofrontendfusion@gmail.com**. O e-mail deve incluir:
 
 - Nome
 - Link do GitHub
@@ -46,8 +71,7 @@ Faça o deploy da sua aplicação em plataformas como GitHub Pages, Heroku, Verc
 **Observação:** É obrigatório entregar os três desafios em até **20 dias** após o início. O desafio atual é a **Parte 01 de 03 desafios**.
 
 ## Prazo
-
-Você tem 20 dias para concluir todos os três desafios.
+ 20 dias para concluir todos os três desafios.
 
 ## Avaliação
 
