@@ -1,6 +1,8 @@
 # Jezebel Guedes
 > Esta é uma página de apresentação pessoal desenvolvida em React Js e Tailwind CSS  para apresentar projetos e informações sobre a desenvolvedora Front-End Jezebel Guedes.
 
+![Purple Phone Mockup Fashion Store Promotion Facebook Ad](https://github.com/user-attachments/assets/56ac5583-4f16-4c49-b79e-14a4404f9e8f)
+
 ## Tecnologias Utilizadas
 
 - [React.js](https://react.dev/): Biblioteca JavaScript para a construção de interfaces de usuário.
@@ -50,6 +52,10 @@ Feito com ♥ por [Jezebel Guedes](https://www.linkedin.com/in/jezebel-guedes/) 
 
 
 <hr />
+<br />
+<br /> 
+
+# Instruções 
 
  ## Desafio de Apresentação Pessoal - Processo Seletivo Frontend Fusion - [cargo voluntário]
 
