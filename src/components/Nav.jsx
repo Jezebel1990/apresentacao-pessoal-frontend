@@ -1,7 +1,8 @@
 import React from "react";
 
 import { BiHomeAlt, BiUser, BiPhoneCall} from 'react-icons/bi';
-import { BsClipboardData, BsBriefcase } from 'react-icons/bs';
+import { FaLaptopCode } from "react-icons/fa";
+import { FaFolderOpen } from "react-icons/fa6";
 
 import { Link } from 'react-scroll';
 
@@ -31,14 +32,14 @@ const Nav = () => {
          smooth={true}
          spy={true} 
         className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center'>
-        <BsClipboardData />
+        <FaLaptopCode  />
         </Link>
         <Link to='projects'
          activeClass='active'
          smooth={true}
          spy={true} 
         className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center'>
-        <BsBriefcase />
+        <FaFolderOpen />
         </Link>
         <Link to='contact'
          activeClass='active'

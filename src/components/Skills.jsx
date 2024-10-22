@@ -38,10 +38,9 @@ const skillsData = [
 const Skills = () => {
   return (
     <section className='section' id='skills'>
-      <div className='container mx-auto'>
-        <div className='flex flex-col lg:flex-row gap-12'>
+      <div className='container mx-auto px-4 md:px-0'>
+        <div className='flex flex-col lg:flex-row gap-12 items-center lg:items-start text-center lg:text-left'>
 
-        
           <motion.div
             variants={fadeIn('right', 0.3)}
             initial='hidden'
@@ -54,12 +53,16 @@ const Skills = () => {
               Como desenvolvedora web, possuo um conjunto diversificado de habilidades que me permitem transformar ideias em soluções digitais inovadoras.
             </h3>
             <a href='#projects'>
-            <button className='btn btn-sm mb-6'>Veja meus projetos</button>
+              <button className='btn btn-sm mb-6'>Veja meus projetos</button>
             </a>
-            <img src={Image} alt='Habilidades' className='w-full h-auto object-contain' />
+
+            <img 
+              src={Image} 
+              alt='Habilidades' 
+              className='w-full h-[200px] sm:h-auto object-contain mx-auto' 
+            />
           </motion.div>
 
-         
           <motion.div
             variants={fadeIn('left', 0.5)}
             initial='hidden'
@@ -67,22 +70,20 @@ const Skills = () => {
             viewport={{ once: false, amount: 0.3 }}
             className='flex-1'
           >
-            <div>
+            <div className='flex flex-col items-center lg:items-start'>
               {skillsData.map((skill, index) => {
                 const { name, description } = skill;
                 return (
                   <div
-                    className='border-b border-white/20 h-auto mb-[38px] flex flex-col'
+                    className='border-b border-white/20 h-auto mb-[38px] flex flex-col max-w-[476px]'
                     key={index}
                   >
-                    <div className='max-w-[476px]'>
-                      <h4 className='text-[20px] tracking-wider font-primary font-semibold mb-2'>
-                        {name}
-                      </h4>
-                      <p className='font-secondary leading-tight'>
-                        {description}
-                      </p>
-                    </div>
+                    <h4 className='text-[20px] tracking-wider font-primary font-semibold mb-2'>
+                      {name}
+                    </h4>
+                    <p className='font-secondary leading-tight'>
+                      {description}
+                    </p>
                   </div>
                 );
               })}
@@ -96,4 +97,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
