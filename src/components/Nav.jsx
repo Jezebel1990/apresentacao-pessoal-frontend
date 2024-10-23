@@ -1,11 +1,9 @@
 import React from "react";
-
 import { BiHomeAlt, BiUser, BiPhoneCall} from 'react-icons/bi';
 import { FaLaptopCode } from "react-icons/fa";
 import { FaFolderOpen } from "react-icons/fa6";
 
 import { Link } from 'react-scroll';
-
 
 const Nav = () => {
  return (
@@ -27,6 +25,7 @@ const Nav = () => {
          className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center'>   
         <BiUser />
         </Link>
+
         <Link to='skills'
          activeClass='active'
          smooth={true}
@@ -34,6 +33,7 @@ const Nav = () => {
         className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center'>
         <FaLaptopCode  />
         </Link>
+
         <Link to='projects'
          activeClass='active'
          smooth={true}
@@ -41,6 +41,7 @@ const Nav = () => {
         className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center'>
         <FaFolderOpen />
         </Link>
+        
         <Link to='contact'
          activeClass='active'
          smooth={true}

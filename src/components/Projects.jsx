@@ -1,11 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants'; 
 import Img1 from '../assets/img1.png';
 import Img2 from '../assets/img2.png';
 import Img3 from '../assets/img3.png';
+import { FaChevronRight, FaChevronLeft } from 'react-icons/fa'; // Import chevron icons
+
+const projects = [
+  {
+    img: Img1,
+    tech: 'Next.js, Tailwind CSS',
+    link: 'https://github.com/Jezebel1990/generate-images.git',
+    title: 'MagicAi - Generate Images',
+  },
+  {
+    img: Img2,
+    tech: 'React.js, Next.js, Tailwind CSS',
+    link: 'https://github.com/Jezebel1990/metaverse.git',
+    title: 'Metaverso Sideral',
+  },
+  {
+    img: Img3,
+    tech: 'React, JavaScript, Tailwind CSS',
+    link: 'https://github.com/Jezebel1990/ecommerce-shop.git',
+    title: 'Fashion Shop',
+  },
+];
 
 const Projects = () => {
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+
+  const prevProject = () => {
+    setCurrentProjectIndex((prevIndex) => 
+      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+    );
+  };
+
+  const nextProject = () => {
+    setCurrentProjectIndex((prevIndex) => 
+      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
     <section className='section' id='projects'>
       <div className='container mx-auto'>
@@ -31,18 +67,18 @@ const Projects = () => {
               </a>
             </div>
 
-            <div className='group relative overflow-hidden border-2 border-white/50 rounded-xl'>
+            <div className='group relative overflow-hidden border-2 border-white/50 rounded-xl hidden lg:flex'>
               <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'></div>
               <img 
                 className='group-hover:scale-125 transition-all duration-500'
-                src={Img1} alt='Projeto 1' 
+                src={projects[0].img} alt='Projeto 1' 
               />
               <div className='absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>
-                <span className='text-gradient'>Next.js, Tailwind CSS</span>
+                <span className='text-gradient'>{projects[0].tech}</span>
               </div>
               <div className='absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50'>
-                <a href='https://github.com/Jezebel1990/generate-images.git'>
-                  <span className='text-3xl text-white'>MagicAi - Generate Images</span>
+                <a href={projects[0].link}>
+                  <span className='text-3xl text-white'>{projects[0].title}</span>
                 </a>
               </div>
             </div>
@@ -55,37 +91,49 @@ const Projects = () => {
             viewport={{ once: false, amount: 0.3 }}
             className='flex-1 flex flex-col gap-y-16'
           >
-            <div className='group relative overflow-hidden border-2 border-white/50 rounded-xl'>
-              <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'></div>
-              <img
-                className='group-hover:scale-125 transition-all duration-500'
-                src={Img2} alt='Projeto 2'
-              />
-              <div className='absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>
-                <span className='text-gradient'>React.js, Next.js, Tailwind CSS</span>
+            {projects.slice(1).map((project, index) => (
+              <div key={index} className='group relative overflow-hidden border-2 border-white/50 rounded-xl hidden lg:flex'>
+                <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'></div>
+                <img
+                  className='group-hover:scale-125 transition-all duration-500'
+                  src={project.img}
+                  alt={`Projeto ${index + 2}`} 
+                />
+                <div className='absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>
+                  <span className='text-gradient'>{project.tech}</span>
+                </div>
+                <div className='absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50 '>
+                  <a href={project.link}>
+                    <span className='text-3xl text-white'>{project.title}</span>
+                  </a>
+                </div>
               </div>
-              <div className='absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50'>
-                <a href='https://github.com/Jezebel1990/metaverse.git'>
-                  <span className='text-3xl text-white'>Metaverso Sideral</span>
-                </a>
-              </div>
-            </div>
+            ))}
 
-            {/* Terceiro projeto */}
-            <div className='group relative overflow-hidden border-2 border-white/50 rounded-xl'>
-              <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'></div>
+            {/* Exibi apenas na versão mobile */}
+            <div className='lg:hidden relative group overflow-hidden border-2 border-white/50 rounded-xl'>
+              <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300 '></div>
               <img
-                className='group-hover:scale-125 transition-all duration-500'
-                src={Img3} alt='Projeto 3'
+                className='group-hover:scale-125 transition-all duration-500 '
+                src={projects[currentProjectIndex].img} 
+                alt={`Projeto ${currentProjectIndex + 1}`} 
               />
               <div className='absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>
-                <span className='text-gradient'>React, JavaScript, Tailwind CSS</span>
+                <span className='text-gradient'>{projects[currentProjectIndex].tech}</span>
               </div>
               <div className='absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50'>
-                <a href='https://github.com/Jezebel1990/ecommerce-shop.git'>
-                  <span className='text-3xl text-white'>Fashion Shop</span>
+                <a href={projects[currentProjectIndex].link}>
+                  <span className='text-3xl text-white'>{projects[currentProjectIndex].title}</span>
                 </a>
               </div>
+
+              {/* Setas para navegação ajustadas */}
+              <button onClick={prevProject} className='absolute top-1/2 right-4 transform -translate-y-1/2 z-50 p-2 bg-black rounded-full'>
+                <FaChevronRight className='text-white' />
+              </button>
+              <button onClick={nextProject} className='absolute top-1/2 left-4 transform -translate-y-1/2 z-50 p-2 bg-black rounded-full'>
+                <FaChevronLeft className='text-white' />
+              </button>
             </div>
           </motion.div>
         </div>

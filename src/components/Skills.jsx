@@ -38,7 +38,7 @@ const skillsData = [
 const Skills = () => {
   return (
     <section className='section' id='skills'>
-      <div className='container mx-auto px-4 md:px-0'>
+      <div className='container mx-auto px-6 md:pt-0'>
         <div className='flex flex-col lg:flex-row gap-12 items-center lg:items-start text-center lg:text-left'>
 
           <motion.div
